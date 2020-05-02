@@ -1,4 +1,4 @@
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH" #This puts LLVM 9.0.1 to PATH which breaks compilation of OpenCore.
 
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH

@@ -20,9 +20,3 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# systemctl completion temporary workaround
-# https://github.com/ohmyzsh/ohmyzsh/issues/8751
-_systemctl_unit_state() {
-  typeset -gA _sys_unit_state
-  _sys_unit_state=( $(__systemctl list-unit-files "$PREFIX*" | awk '{print $1, $2}') ) }
